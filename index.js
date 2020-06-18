@@ -1,9 +1,16 @@
-const Blockchain = require('./blockchain');
+const Blockchain = require('./controller/blockchain');
 
 const blockchain = new Blockchain();
-blockchain.addBlock("Bloco #1");
-blockchain.addBlock("Bloco #2");
-blockchain.addBlock("Bloco #3");
+
+const blockchainSize = Math.floor(Math.random() * 100) + 1;
+
+for (let i = 0; i <= blockchainSize; i++) {
+    blockchain.addBlock(`Bloco #${i}`)
+}
+  
+
+    
+
 
 console.log(blockchain);
 
