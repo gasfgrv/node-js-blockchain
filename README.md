@@ -1,23 +1,28 @@
 # Blockchain com Node.js <!-- omit in toc -->
 
-- [Blockchain](#blockchain)
-    - [O que é Blockchain?](#o-que-%c3%a9-blockchain)
-    - [Conceitos Essenciais](#conceitos-essenciais)
-    - [Princípios](#princ%c3%adpios)
-    - [Qualidades](#qualidades)
-    - [Inovações](#inova%c3%a7%c3%b5es)
-- [Node.js](#nodejs)
-    - [O que é Node.js?](#o-que-%c3%a9-nodejs)
-    - [Execução single-thread](#execu%c3%a7%c3%a3o-single-thread)
-- [Fontes](#fontes)
+- [1. Blockchain](#1-blockchain)
+  - [1.1. O que é Blockchain?](#11-o-que-é-blockchain)
+  - [1.2. Conceitos Essenciais](#12-conceitos-essenciais)
+  - [1.3. Princípios](#13-princípios)
+  - [1.4. Qualidades](#14-qualidades)
+  - [1.5. Inovações](#15-inovações)
+- [2. Node.js](#2-nodejs)
+  - [2.1. O que é Node.js?](#21-o-que-é-nodejs)
+  - [2.2. Execução single-thread](#22-execuçãosingle-thread)
+- [3. Fontes](#3-fontes)
 
-## Blockchain
-#### O que é Blockchain?
+## 1. Blockchain
+### 1.1. O que é Blockchain?
+
 Relativo ao blockchain pode ser considerada como uma estrutura de dados (organização e manipulação de dados de forma eficiente), no qual armazena os dados em blocos encadeados (de onde vem o nome), visando a imutabilidade, distribuindo os dados em uma rede distribuída, ou seja, a informação se encontra copiada e disponível para qualquer um na rede, assegurando assim a confiabilidade do conteúdo - caso um integrante perca o dado, a rede pode disponibilizar uma nova cópia para o mesmo, e, caso algum dado seja alterado o mesmo será comparado ao mesmo dado disponível nos demais nós (pontos da rede), assegurando assim sua autenticidade e a uniformidade da informação-, diferentemente de redes centralizadas, a confiança das informações não está atrelada a um órgão centralizado no qual define e distribui para os demais.
+
+<p align="center">
+    <img  src="https://miro.medium.com/max/700/1*DdJzZUrvyO49UgA1cfLTBA.png">
+</p>
 
 A notoriedade dessa tecnologia inicia-se em 2008, escrito sob o pseudônimo de Satoshi Nakamoto, o relatório Bitcoin: um sistema financeiro eletrônico peer-to-peer (do original,  Bitcoin: A Peer-to-Peer Eletronic Cash System), gerou interesse ao apresentar uma solução para pagamentos eletrônicos sem a necessidade de confiar em um órgão centralizado, mas sim de uma prova criptográfica para a validação de transações financeiras. Desde então, essa tecnologia serviu como base da bitcoin, servindo como uma forma de registrar as transações, KATORI (2017) descreve que as operações e  transações  são registradas, após a criação da primeira entrada, seguindo uma ordem cronológica, mas antes precisam ser validadas, criando assim, um elo com a transação (ou bloco) anterior. Conforme PRADO (2017) o blockchain serve como uma solução para que uma pessoa não gaste o mesmo Bitcoin duas vezes ou afirmar que enviou 10 Bitcoins mas ter transferido apenas 0,1 Bitcoin.
 
-#### Conceitos Essenciais
+### 1.2. Conceitos Essenciais
 
 Para entender o seu funcionamento, deve-se ter conhecimento de alguns conceitos essenciais de tecnologias usadas, PIRES (2016) os descreve como:
 
@@ -29,11 +34,13 @@ Para entender o seu funcionamento, deve-se ter conhecimento de alguns conceitos 
 
 - **Redes P2P:** é um modelo que se opõe ao modelo tradicional de cliente-servidor, utilizando-se de uma rede distribuída em que cada máquina, chamada de nó, executam funções de requisitar (cliente) e enviar (servidor) serviços. Esse tipo de rede não necessita de uma entidade de controle, então, caso uma máquina seja desconectada a rede ainda assim continuaria funcionando, enquanto em uma rede cliente-servidor, se o servidor for desconectado a rede ficará inutilizada. Por ser descentralizada, as informações podem para diversas máquinas interconectadas, o que torna praticamente que apagar ou alterar os registros, dando assim uma maior transparência.
 
-#### Princípios
+### 1.3. Princípios
 
 ROMAN (2018 apud TAPSCOTT & TAPSCOTT, 2017)  aponta os cinco principais princípios do blockchain:
 
 - **Banco de dados distribuído:** cada parte tem um acesso ao banco de dados e seu histórico. Não há controle das informações por uma das partes. Não há intermediário para que uma das partes possa verificar os registros;
+
+- **Transparência com o pseudônimo:** toda transação é visível para todos. Cada nó possui um endereço, e as transações ocorrem entre endereços. Os usuários podem optar por manter-se no anonimato;
 
 - **Transmissão peer-to-peer:** Não existe um nó central, cada nó armazena e envia informações para os demais;
 Transparência com o pseudônimo: toda transação é visível para todos. Cada nó possui um endereço, e as transações ocorrem entre endereços. Os usuários podem optar por manter-se no anonimato;
@@ -42,7 +49,7 @@ Transparência com o pseudônimo: toda transação é visível para todos. Cada 
 
 - **Lógica computacional:** as transações podem ser vinculadas à lógica computacional, sendo assim programáveis, em que pode ser criados algoritmos e regras para a transação entre nós, ou smart contracts.
 
-#### Qualidades
+### 1.4. Qualidades
 
 Conforme KATORI (2017 apud TAPSCOTT & TAPSCOTT, 2017) principais qualidades do blockchain são:
 
@@ -58,7 +65,7 @@ Conforme KATORI (2017 apud TAPSCOTT & TAPSCOTT, 2017) principais qualidades do b
 
 - Registrar todas as transações já feitas, caso altere uma transação, todas as posteriores também serão.
 
-#### Inovações
+### 1.5. Inovações
 
 Para GUPTA (2017) o surgimento do blockchain, trouxe cinco grandes inovações, sendo elas:
 
@@ -73,9 +80,9 @@ aplicado em mais áreas.
 
 - A última é chamada de blockchain scaling, que visa acelerar o processo de validação dos blocos, verificando quantos nós são necessários e distribuindo o trabalho de forma eficiente, sem que a segurança seja afetada.
 
-## Node.js
+## 2. Node.js
 
-#### O que é Node.js?
+### 2.1. O que é Node.js?
 
 O Node.js é um ambiente de execução para JavaScript, assíncrono e orientado a eventos de código aberto. O Node.js permite que os desenvolvedores usem JavaScript para escrever scripts do lado do servidor.
 
@@ -83,8 +90,12 @@ O Node.js pode ser considerado como um ambiente de execução Javascript server-
 
 O principal motivo de sua adoção é a sua escalabilidade, além de sua arquitetura, flexibilidade e baixo custo, o tornam uma boa escolha para implementação de Microsserviços e componentes da arquitetura Serverless.
 
-#### Execução single-thread
 
+<p align="center">
+  <img width="40%" height="40%" src="https://www.opus-software.com.br/wp-content/uploads/2019/04/Captura-de-Tela-2019-04-22-a%CC%80s-15.26.05-768x842.png">
+</p>
+
+### 2.2. Execução single-thread
 Sua principal característica consiste em sua execução single-thread (uma uníca thread é responsável por executar o código da aplicação) enquanto em outras tecnologias como PHP, Java, C# a execução é multi-thread.
 
 Na prática, um servidor web utilizando linguagens tradicionais, cada requisição recebida, uma nova thread é criada para tratar a mesma. Para a criação de cada thread serão demandados recursos computacionais. Sendo esses recursos limitados, as threads não serão criadas infinitamente, e quando atinge-se o limite, haverá uma fila de espera para que cada nova requisição possa ser tratada após a liberação de recursos.
@@ -97,7 +108,7 @@ Apesar de ser single-threaded, é possível tratar requisições concorrentes em
 
 Sua arquitetura possibilita um número maior de requisições concorrentes sejam tratadas em comparação com o modelo tradicional, que é limitado devido ao alto consumo computacional pela criação e manutenção de threads a cada requisição.
 
-## Fontes
+## 3. Fontes
 
 1. CRUZ, Eduardo. Formas de Mineração e Diferença entre: PoW, PoS, PoC. Medium, 11 de outubro de 2017. Disponível em: https://medium.com/@eduardo.domc/formas-de-minera%C3%A7%C3%A3o-e-diferen%C3%A7a-entre-pow-pos-poc-22a3881195b5. Acesso em: 15 de setembro de 2019.
 
