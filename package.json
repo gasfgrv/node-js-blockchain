@@ -1,7 +1,7 @@
 {
   "name": "NodeJsBlockchain",
   "version": "1.0.0",
-  "description": "- [Blockchain](#blockchain)     - [O que é Blockchain?](#o-que-%c3%a9-blockchain)     - [Conceitos Essenciais](#conceitos-essenciais)     - [Princípios](#princ%c3%adpios)     - [Qualidades](#qualidades)     - [Inovações](#inova%c3%a7%c3%b5es) - [Node.js](#nodejs)     - [O que é Node.js?](#o-que-%c3%a9-nodejs)     - [Execução single-thread](#execu%c3%a7%c3%a3o-single-thread) - [Fontes](#fontes)",
+  "description": "Aplicação simples de blockchain",
   "main": "index.js",
   "dependencies": {
     "crypto": "^1.0.1",

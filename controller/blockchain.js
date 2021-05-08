@@ -1,6 +1,6 @@
-const Block = require('./block');
+const Block = require('../model/block');
 
-class BlockChain{
+export class BlockChain{
     constructor(difficulty = 1) {
         this.blocks = [new Block()];
         this.index = 1;
@@ -41,5 +41,3 @@ class BlockChain{
         return true;
     }
 }
-
-module.exports = BlockChain;
