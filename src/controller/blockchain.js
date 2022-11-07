@@ -1,6 +1,7 @@
 const Block = require('../model/block');
 
 export class BlockChain{
+    
     constructor(difficulty = 1) {
         this.blocks = [new Block()];
         this.index = 1;
