@@ -1,8 +1,8 @@
-const sha256 = require('crypto-js/sha256');
+import sha256 from 'crypto-js/sha256.js';
 
-export class Block {
-    
-    constructor (index = 0, previousHash = null, data = "Bloco genesis", difficulty = 1){
+export default class Block {
+
+    constructor(index = 0, previousHash = null, data = "Bloco genesis", difficulty = 1) {
         this.index = index;
         this.previousHash = previousHash;
         this.data = data;
